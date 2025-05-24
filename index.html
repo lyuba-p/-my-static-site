@@ -2,28 +2,105 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Image Landing Page</title>
+  <title>My Static Site</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     html, body {
       margin: 0;
       padding: 0;
       height: 100%;
-      width: 100%;
+      font-family: sans-serif;
+      background-color: #000;
+      color: white;
     }
-    body {
+
+    nav {
+      background-color: #111;
+      padding: 10px 0;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li {
+      margin: 0 20px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+
+    .hero {
       display: flex;
       justify-content: center;
       align-items: center;
-      background-color: #000;
+      height: 100vh;
+      overflow: hidden;
     }
-    img {
-      max-width: 100%;
-      max-height: 100%;
+
+    .hero img {
+      width: 100%;
+      height: 100%;
       object-fit: contain;
+    }
+
+    section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    section h2 {
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+
+    section p {
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.6;
     }
   </style>
 </head>
 <body>
-  <img src="landing.jpg" alt="Landing Page">
+
+  <nav>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="hero">
+    <img src="landing.jpeg" alt="Landing Page">
+  </div>
+
+  <section id="about">
+    <h2>About</h2>
+    <p>This site is a static landing page built with HTML and hosted with Cloudflare Pages.</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email me at: your@email.com</p>
+  </section>
+
 </body>
 </html>
+
