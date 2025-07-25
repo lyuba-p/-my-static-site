@@ -15,9 +15,42 @@
       object-fit: cover;
       display: block;
     }
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      pointer-events: none;
+    }
+    .overlay h1 {
+      font-family: serif;
+      color: #800020;
+      font-size: 3em;
+      letter-spacing: 0.3em;
+      margin: 0 0 0.5em 0;
+      text-align: center;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+    }
+    .overlay p {
+      font-family: serif;
+      color: #800020;
+      font-size: 1.5em;
+      margin: 0;
+      text-align: center;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    }
   </style>
 </head>
 <body>
+  <div class="overlay">
+    <h1>C O L E X I A</h1>
+    <p>The Future of Mindful Shopping and Styling Is Coming.</p>
+  </div>
   <img src="landing2.jpeg" alt="Landing Page Image">
 </body>
 </html>
