@@ -5,69 +5,65 @@
   <title>Colexia</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,500;0,600;0,700;0,800;1,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,500;0,600;0,700;0,800;1,600;1,700&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
       padding: 0;
-      background-color: #1A1210;
+      background-color: #F5F0EB;
       font-family: 'EB Garamond', serif;
     }
     img {
       width: 100vw;
       height: 100vh;
       object-fit: cover;
+      object-position: left center;
       display: block;
     }
-    .overlay {
+    .masthead {
       position: absolute;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+      top: clamp(2rem, 5vw, 4rem);
+      left: clamp(2rem, 5vw, 4rem);
       pointer-events: none;
-      padding: 0 2rem;
-      box-sizing: border-box;
+    }
+    .footer {
+      position: absolute;
+      bottom: clamp(2rem, 5vw, 4rem);
+      left: clamp(2rem, 5vw, 4rem);
+      pointer-events: none;
     }
     .wordmark {
       color: #800020;
-      font-size: clamp(3rem, 9vw, 6rem);
-      font-weight: 800;
+      font-size: clamp(2.5rem, 7vw, 5rem);
+      font-weight: 700;
       letter-spacing: 0.3em;
-      margin: 0 0 1.25em 0;
-      text-align: center;
-      text-shadow: 0 2px 12px rgba(0,0,0,0.5);
+      margin: 0 0 0.6em 0;
+      line-height: 1;
     }
     .tagline {
       color: #800020;
-      font-size: clamp(1.2rem, 2.2vw, 1.75rem);
+      font-size: clamp(1rem, 1.6vw, 1.4rem);
       font-style: italic;
-      font-weight: 700;
-      letter-spacing: 0.05em;
-      margin: 0 0 2.5em 0;
-      text-align: center;
-      text-shadow: 0 2px 10px rgba(0,0,0,0.45);
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      margin: 0;
     }
     .coming-soon {
       color: #800020;
-      font-size: clamp(0.75rem, 1.1vw, 0.95rem);
-      font-weight: 700;
+      font-size: clamp(0.7rem, 0.95vw, 0.9rem);
+      font-weight: 600;
       letter-spacing: 0.45em;
       text-transform: uppercase;
       margin: 0;
-      text-align: center;
-      text-shadow: 0 2px 10px rgba(0,0,0,0.45);
     }
   </style>
 </head>
 <body>
-  <div class="overlay">
+  <div class="masthead">
     <h1 class="wordmark">COLEXIA</h1>
     <p class="tagline">Curate. Collect. Closet.</p>
+  </div>
+  <div class="footer">
     <p class="coming-soon">Coming Soon</p>
   </div>
   <img src="landing3.jpeg" alt="Colexia">
