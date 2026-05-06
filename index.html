@@ -2,12 +2,16 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Image Landing Page</title>
+  <title>Colexia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
       padding: 0;
-      background-color: #000;
+      background-color: #1A1210;
+      font-family: 'Bodoni Moda', serif;
     }
     img {
       width: 100vw;
@@ -26,20 +30,34 @@
       justify-content: center;
       align-items: center;
       pointer-events: none;
+      padding: 0 2rem;
+      box-sizing: border-box;
     }
-    .overlay h1 {
-      font-family: serif;
+    .wordmark {
       color: #800020;
-      font-size: 6em;
+      font-size: clamp(3rem, 9vw, 6rem);
+      font-weight: 400;
       letter-spacing: 0.3em;
-      margin: 0 0 0.5em 0;
+      margin: 0 0 1.25em 0;
       text-align: center;
       text-shadow: 0 2px 8px rgba(0,0,0,0.4);
     }
-    .overlay p {
-      font-family: serif;
+    .tagline {
       color: #800020;
-      font-size: 1.5em;
+      font-size: clamp(1.1rem, 2vw, 1.6rem);
+      font-style: italic;
+      font-weight: 400;
+      letter-spacing: 0.05em;
+      margin: 0 0 2.5em 0;
+      text-align: center;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    }
+    .coming-soon {
+      color: #800020;
+      font-size: clamp(0.7rem, 1vw, 0.85rem);
+      font-weight: 500;
+      letter-spacing: 0.45em;
+      text-transform: uppercase;
       margin: 0;
       text-align: center;
       text-shadow: 0 2px 8px rgba(0,0,0,0.3);
@@ -48,9 +66,10 @@
 </head>
 <body>
   <div class="overlay">
-    <h1>COLEXIA</h1>
-    <p>The Future of Mindful Shopping and Styling Is Coming.</p>
+    <h1 class="wordmark">COLEXIA</h1>
+    <p class="tagline">Curate. Collect. Closet.</p>
+    <p class="coming-soon">Coming Soon</p>
   </div>
-  <img src="landing2.jpeg" alt="Landing Page Image">
+  <img src="landing2.jpeg" alt="Colexia">
 </body>
 </html>
