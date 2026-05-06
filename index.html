@@ -7,42 +7,44 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,500;0,600;0,700;0,800;1,600;1,700&display=swap" rel="stylesheet">
   <style>
+    * { box-sizing: border-box; }
     body {
       margin: 0;
       padding: 0;
       background-color: #F5F0EB;
       font-family: 'EB Garamond', serif;
+      min-height: 100vh;
+      display: flex;
     }
-    img {
-      width: 100vw;
-      height: 100vh;
-      object-fit: cover;
-      object-position: left center;
-      display: block;
+    .panel-text {
+      flex: 0 0 42%;
+      background-color: #F5F0EB;
+      padding: clamp(2rem, 5vw, 4.5rem);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+      min-height: 100vh;
     }
-    .masthead {
-      position: absolute;
-      top: clamp(2rem, 5vw, 4rem);
-      left: clamp(2rem, 5vw, 4rem);
-      pointer-events: none;
-    }
-    .footer {
-      position: absolute;
-      bottom: clamp(2rem, 5vw, 4rem);
-      left: clamp(2rem, 5vw, 4rem);
-      pointer-events: none;
+    .panel-image {
+      flex: 1 1 58%;
+      background-image: url('landing3.jpeg');
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      min-height: 100vh;
     }
     .wordmark {
       color: #800020;
-      font-size: clamp(2.5rem, 7vw, 5rem);
+      font-size: clamp(2.25rem, 4.5vw, 3.5rem);
       font-weight: 700;
-      letter-spacing: 0.3em;
+      letter-spacing: 0.25em;
       margin: 0 0 0.6em 0;
       line-height: 1;
     }
     .tagline {
       color: #800020;
-      font-size: clamp(1rem, 1.6vw, 1.4rem);
+      font-size: clamp(1rem, 1.5vw, 1.35rem);
       font-style: italic;
       font-weight: 600;
       letter-spacing: 0.04em;
@@ -50,22 +52,35 @@
     }
     .coming-soon {
       color: #800020;
-      font-size: clamp(0.7rem, 0.95vw, 0.9rem);
+      font-size: clamp(0.7rem, 0.9vw, 0.85rem);
       font-weight: 600;
       letter-spacing: 0.45em;
       text-transform: uppercase;
       margin: 0;
+      position: absolute;
+      bottom: clamp(2rem, 5vw, 4.5rem);
+      left: clamp(2rem, 5vw, 4.5rem);
+    }
+    @media (max-width: 768px) {
+      body { flex-direction: column; min-height: auto; }
+      .panel-text {
+        flex: 0 0 auto;
+        min-height: 50vh;
+        padding: 3rem 2rem 5rem;
+      }
+      .panel-image {
+        flex: 0 0 50vh;
+        min-height: 50vh;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="masthead">
+  <div class="panel-text">
     <h1 class="wordmark">COLEXIA</h1>
     <p class="tagline">Curate. Collect. Closet.</p>
-  </div>
-  <div class="footer">
     <p class="coming-soon">Coming Soon</p>
   </div>
-  <img src="landing3.jpeg" alt="Colexia">
+  <div class="panel-image"></div>
 </body>
 </html>
